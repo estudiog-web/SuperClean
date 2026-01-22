@@ -54,7 +54,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-           
         }
 
         header .logo {
@@ -62,7 +61,6 @@
             font-weight: bold;
             color: var(--cor-branca);
             text-decoration: none;
-           
             letter-spacing: 1px;
         }
 
@@ -86,9 +84,8 @@
             opacity: 0.8;
         }
 
-        /* --- Seção Hero (Com imagem de SOFÁ) --- */
+        /* --- Seção Hero --- */
         #hero {
-            /* Imagem focada em limpeza de estofado profissional */
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                         url('https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1470&auto=format&fit=crop') no-repeat center center/cover;
             height: 80vh;
@@ -169,58 +166,6 @@
             color: var(--cor-secundaria);
         }
 
-        /* --- Formulário de Contato --- */
-        #contato {
-            padding: 80px 0;
-        }
-
-        #contato h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--cor-principal);
-        }
-
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-        }
-
-        form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-
-        form button {
-            width: 100%;
-            padding: 15px;
-            background: var(--cor-principal);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        form button:hover {
-            background: var(--cor-principal-dark);
-        }
-
         /* --- Rodapé --- */
         footer {
             background: #222;
@@ -229,7 +174,6 @@
             padding: 40px 20px;
         }
 
-        /* --- Responsividade --- */
         @media (max-width: 768px) {
             header .container { flex-direction: column; }
             header nav { margin-top: 15px; }
@@ -278,12 +222,9 @@
                         <h3>Tapetes e Carpetes</h3>
                         <p>Lavagem técnica que preserva as fibras e as cores.</p>
                     </div>
-                  
                 </div>
             </div>
         </section>
-
-        
     </main>
 
     <footer>
@@ -292,5 +233,28 @@
         </div>
     </footer>
 
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB4kaVYrfCYeu1LkZj3tgW3Rn1BND5hRWk",
+            authDomain: "superclean-426ab.firebaseapp.com",
+            databaseURL: "https://superclean-426ab-default-rtdb.firebaseio.com",
+            projectId: "superclean-426ab",
+            storageBucket: "superclean-426ab.firebasestorage.app",
+            messagingSenderId: "710947410931",
+            appId: "1:710947410931:web:ea7bc519874cc875b67886"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        
+        // Registra apenas que o site foi aberto
+        push(ref(db, 'acessos'), {
+            horario: new Date().toLocaleString(),
+            info: "Alguém abriu o site Super Clean"
+        });
+    </script>
 </body>
 </html>
