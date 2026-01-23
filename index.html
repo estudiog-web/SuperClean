@@ -4,85 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Clean | Limpeza de Estofados Profissional</title>
-    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta property="og:title" content="Super Clean | Higienização Profissional">
+    <meta property="og:description" content="Limpeza profunda de sofás, tapetes e colchões em Ibirité e região. Deixe sua casa renovada!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://estudiog-web.github.io/Estudio-G/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1000&auto=format&fit=crop">
+
     <style>
         /* --- Variáveis de Cores --- */
         :root {
-            --cor-principal: #6198d3; /* Azul Super Clean */
+            --cor-principal: #6198d3; 
             --cor-principal-dark: #4a7ab3;
             --cor-secundaria: #333333;
             --cor-fundo: #ced1d0;
             --cor-branca: #ffffff;
             --cor-whatsapp: #25d366;
+            --cor-instagram: #E1306C;
         }
 
         /* --- Reset e Base --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             background-color: var(--cor-fundo);
             color: var(--cor-secundaria);
         }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        /* --- Cabeçalho (Menu) --- */
+        /* --- Cabeçalho --- */
         header {
             background-color: var(--cor-principal);
-            padding: 15px 0;
+            padding: 10px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        header .container {
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        
+        /* AJUSTE DO ZOOM NA LOGO SEM AUMENTAR O CABEÇALHO */
+        .logo-container {
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .logo-circulo {
+            width: 70px; /* Tamanho fixo do círculo */
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden; /* Corta o que sobrar da imagem */
+            background: white;
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
             align-items: center;
         }
 
-        header .logo {
-            font-size: 2.0rem;
+        .logo-circulo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem preencher o círculo */
+            transform: scale(1.6); /* O ZOOM: aumenta a imagem dentro do círculo */
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
             font-weight: bold;
             color: var(--cor-branca);
-            text-decoration: none;
-            letter-spacing: 1px;
         }
+        
+        header nav ul { display: flex; list-style: none; align-items: center; }
+        header nav ul li { margin-left: 30px; }
+        header nav ul li a { color: var(--cor-branca); text-decoration: none; font-weight: 600; }
 
-        header nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        header nav ul li {
-            margin-left: 20px;
-        }
-
-        header nav ul li a {
-            color: var(--cor-branca);
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        header nav ul li a:hover {
-            opacity: 0.8;
-        }
+        .insta-top { font-size: 1.4rem; transition: 0.3s; color: var(--cor-branca); }
+        .insta-top:hover { color: #ffe5e5; transform: scale(1.1); }
 
         /* --- Seção Hero --- */
         #hero {
@@ -97,18 +100,8 @@
             color: var(--cor-branca);
             padding: 0 20px;
         }
-
-        #hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-        }
-
-        #hero p {
-            font-size: 1.4rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-        }
+        #hero h1 { font-size: 3.5rem; margin-bottom: 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+        #hero p { font-size: 1.4rem; margin-bottom: 30px; max-width: 800px; }
 
         .cta-button {
             background-color: var(--cor-whatsapp);
@@ -118,67 +111,63 @@
             font-weight: bold;
             border-radius: 50px;
             font-size: 1.2rem;
-            transition: transform 0.3s ease;
+            transition: 0.3s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: inline-block;
         }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            background-color: #1eb956;
-        }
+        .cta-button:hover { transform: scale(1.05); background-color: #1eb956; }
 
         /* --- Seção de Serviços --- */
-        #servicos {
-            padding: 80px 0;
-            background-color: var(--cor-branca);
-        }
-
-        #servicos h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--cor-principal);
-            margin-bottom: 50px;
-        }
+        #servicos { padding: 80px 0; background-color: var(--cor-branca); }
+        #servicos h2 { text-align: center; font-size: 2.5rem; color: var(--cor-principal); margin-bottom: 50px; }
 
         .servicos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px;
         }
 
         .servico-card {
             background: var(--cor-fundo);
-            padding: 40px 20px;
+            padding: 30px 15px;
             border-radius: 15px;
             text-align: center;
             transition: 0.3s;
-            border-bottom: 4px solid transparent;
         }
-
-        .servico-card:hover {
-            transform: translateY(-10px);
-            border-bottom: 4px solid var(--cor-principal);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .servico-card h3 {
-            margin-bottom: 15px;
-            color: var(--cor-secundaria);
-        }
+        .servico-card h3 { margin-bottom: 10px; color: var(--cor-secundaria); font-size: 1.2rem; }
 
         /* --- Rodapé --- */
         footer {
-            background: #222;
-            color: #999;
+            background-color: var(--cor-principal);
+            color: var(--cor-branca);
             text-align: center;
             padding: 40px 20px;
+            font-weight: bold;
         }
 
+        .insta-footer {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--cor-branca);
+            text-decoration: none;
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        .insta-footer:hover { background: var(--cor-branca); color: var(--cor-principal); }
+        .insta-footer i { margin-right: 8px; font-size: 1.3rem; }
+
+        /* --- Responsividade --- */
+        @media (max-width: 1024px) {
+            .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 768px) {
             header .container { flex-direction: column; }
             header nav { margin-top: 15px; }
             #hero h1 { font-size: 2.2rem; }
-            #hero p { font-size: 1.1rem; }
+            .servicos-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -186,11 +175,22 @@
 
     <header>
         <div class="container">
-            <a href="#" class="logo">Super Clean Higienizações</a>
+            <a href="#" class="logo-container">
+                <div class="logo-circulo">
+                    <img src="logo.png" alt="Super Clean Logo">
+                </div>
+                <span class="logo-text">Super Clean</span>
+            </a>
+            
             <nav>
                 <ul>
                     <li><a href="#hero">Início</a></li>
-                    <li><a href="#servicos">Serviços</a></li>   
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li>
+                        <a href="https://www.instagram.com/super_clean.oficial?igsh=c2E5OHQ1OTFkcmkx&utm_source=qr" target="_blank" class="insta-top">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>   
                 </ul>
             </nav>
         </div>
@@ -201,7 +201,7 @@
             <h1>Seus Estofados Limpos e Renovados</h1>
             <p>Especialistas em remoção de manchas, ácaros e odores. Devolvemos a vida ao seu sofá com tecnologia de ponta.</p>
             <a href="https://wa.me/5531981116900" target="_blank" class="cta-button">
-                Solicitar Orçamento no WhatsApp
+                <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento no WhatsApp
             </a>
         </section>
 
@@ -211,8 +211,11 @@
                 <div class="servicos-grid">
                     <div class="servico-card">
                         <h3>Limpeza de Sofás</h3>
-                        <h3>Estofado de Carro</h3>
                         <p>Higienização profunda para todos os tipos de tecidos.</p>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Estofado de Carro</h3>
+                        <p>Limpeza técnica automotiva com cuidado e brilho.</p>
                     </div>
                     <div class="servico-card">
                         <h3>Colchões</h3>
@@ -230,6 +233,12 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Super Clean Higienizações. Ibirité - MG.</p>
+            
+            <a href="https://www.instagram.com/super_clean.oficial?igsh=c2E5OHQ1OTFkcmkx&utm_source=qr" target="_blank" class="insta-footer">
+                <i class="fa-brands fa-instagram"></i> Siga nosso Instagram
+            </a>
+
+            <p style="font-size: 14px; margin-top: 20px; opacity: 0.9;">Desenvolvido por Estudio G</p>
         </div>
     </footer>
 
@@ -250,7 +259,6 @@
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
         
-        // Registra apenas que o site foi aberto
         push(ref(db, 'acessos'), {
             horario: new Date().toLocaleString(),
             info: "Alguém abriu o site Super Clean"
