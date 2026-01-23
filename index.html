@@ -260,9 +260,12 @@
     </footer>
 
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+        // Importação das funções necessárias (Versão 12.8.0 que você recebeu)
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js";
+        import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-database.js";
 
+        // Sua configuração oficial
         const firebaseConfig = {
             apiKey: "AIzaSyB4kaVYrfCYeu1LkZj3tgW3Rn1BND5hRWk",
             authDomain: "superclean-426ab.firebaseapp.com",
@@ -270,17 +273,22 @@
             projectId: "superclean-426ab",
             storageBucket: "superclean-426ab.firebasestorage.app",
             messagingSenderId: "710947410931",
-            appId: "1:710947410931:web:ea7bc519874cc875b67886"
+            appId: "1:710947410931:web:ea7bc519874cc875b67886",
+            measurementId: "G-MLVEMYP5L6"
         };
 
+        // Inicializar Firebase, Analytics e Database
         const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
         const db = getDatabase(app);
         
+        // --- Registro de visitas (Realtime Database) ---
         push(ref(db, 'acessos'), {
             horario: new Date().toLocaleString(),
             info: "Alguém abriu o site Super Clean"
         });
 
+        // --- Lógica do Cupom de Desconto (Urgência) ---
         const cupomRef = ref(db, 'config/cupons_restantes');
         onValue(cupomRef, (snapshot) => {
             const qtd = snapshot.val();
