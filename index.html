@@ -235,105 +235,107 @@
             nav ul li a { color: var(--cor-text); font-size: 1.2rem; display: block; padding: 10px; }
             header.scrolled nav ul { top: 60px; }
         }
-        /* =========================
-   TEMA DIA DAS MÃES
+       /* =========================
+   DIA DAS MÃES PREMIUM
 ========================= */
 
 .banner-maes{
-    background: linear-gradient(135deg, #d48ca3, #b76e79);
-    padding: 14px 20px;
+    background: linear-gradient(90deg, #ff4d6d, #ff758f);
     color: white;
     text-align: center;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
     position: relative;
-    z-index: 1500;
-    box-shadow: 0 5px 20px rgba(183,110,121,0.35);
-}
-
-.banner-maes .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
+    z-index: 2000;
+    box-shadow: 0 4px 15px rgba(255,77,109,0.25);
 }
 
 .banner-maes strong{
     font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-.banner-maes span{
-    font-size: 0.95rem;
-    opacity: 0.95;
 }
 
 .banner-maes a{
-    background: white;
-    color: #b76e79;
-    padding: 10px 20px;
-    border-radius: 30px;
+    color: white;
     font-weight: 700;
-    transition: 0.3s;
+    margin-left: 8px;
+    text-decoration: underline;
 }
 
-.banner-maes a:hover{
-    transform: translateY(-2px);
-    background: #fff5f7;
-}
-
-/* Hero mais delicado */
+/* HERO MAIS PREMIUM */
 #hero{
     background:
-    linear-gradient(135deg, rgba(183,110,121,0.65), rgba(97,152,211,0.55)),
+    linear-gradient(rgba(0,0,0,0.68), rgba(97,152,211,0.50)),
     url('https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?q=80&w=1409&auto=format&fit=crop');
+
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
-/* Botões mais premium */
+/* DETALHE DECORATIVO */
+#hero::before{
+    content: "🌸";
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 90px;
+    opacity: 0.10;
+}
+
+/* TEXTO PROMO */
+.promo-maes{
+    margin-top: 25px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(6px);
+    padding: 18px 25px;
+    border-radius: 18px;
+    max-width: 750px;
+}
+
+.promo-maes h3{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffd6de;
+}
+
+.promo-maes p{
+    font-size: 1rem !important;
+    margin-bottom: 0 !important;
+    color: rgba(255,255,255,0.92);
+}
+
+/* BOTÃO PRINCIPAL */
 .btn-primary{
-    background: linear-gradient(135deg, #d48ca3, #b76e79);
+    background: linear-gradient(135deg, #25d366, #18b958);
 }
 
 .btn-primary:hover{
-    background: linear-gradient(135deg, #b76e79, #9a5866);
+    transform: translateY(-4px) scale(1.02);
 }
 
-/* Destaque nos títulos */
-.section-header h2{
-    color: #b76e79;
-}
-
-/* Efeito floral suave */
-body::before{
-    content: "🌸";
-    position: fixed;
-    top: 20%;
-    left: 2%;
-    font-size: 120px;
-    opacity: 0.04;
-    pointer-events: none;
-}
-
-body::after{
-    content: "💖";
-    position: fixed;
-    bottom: 10%;
-    right: 2%;
-    font-size: 120px;
-    opacity: 0.04;
-    pointer-events: none;
-}
-
+/* MOBILE */
 @media(max-width:768px){
 
-    .banner-maes .container{
-        flex-direction: column;
-        gap: 10px;
+    .banner-maes{
+        font-size: 0.82rem;
+        line-height: 1.5;
+        padding: 10px;
     }
 
-    .banner-maes span{
-        font-size: 0.85rem;
+    .promo-maes{
+        padding: 15px;
+    }
+
+    .promo-maes h3{
+        font-size: 1.1rem;
+    }
+
+    #hero::before{
+        font-size: 60px;
+        top: 20px;
+        right: 20px;
     }
 }
     </style>
@@ -346,17 +348,13 @@ body::after{
 
    <!-- BANNER DIA DAS MÃES -->
 <div class="banner-maes">
-    <div class="container">
-        <strong>🌸 Especial Dia das Mães 🌸</strong>
-        <span>
-            Presenteie sua mãe com um ambiente mais limpo, saudável e livre de ácaros. 
-            Higienização premium com condições especiais.
-        </span>
-
-        <a href="https://wa.me/5531981116900" target="_blank">
-            Saiba Mais
-        </a>
-    </div>
+    🌸 ESPECIAL DIA DAS MÃES —
+    Higienização premium para deixar a casa da sua mãe mais limpa, saudável e livre de ácaros.
+    
+    <a href="https://wa.me/5531981116900" target="_blank">
+        Saiba mais
+    </a>
+</div>
 </div>
 
     <header id="header">
@@ -385,6 +383,14 @@ body::after{
     <main>
         <section id="hero">
             <h1 class="reveal">Sua casa limpa de verdade.<br>Sua saúde protegida.</h1>
+            <div class="promo-maes reveal">
+    <h3>💖 Promoção Especial Dia das Mães</h3>
+
+    <p>
+        Demonstre carinho cuidando da saúde e do conforto de quem sempre cuidou de você.
+        Consulte nossas condições especiais via WhatsApp.
+    </p>
+</div>
             <p class="reveal">Especialistas em higienização profunda em Ibirité e Região. Eliminamos 99% dos fungos, bactérias e odores.</p>
             <div class="btn-group reveal">
                 <a href="https://wa.me/5531981116900" target="_blank" class="btn btn-primary">
