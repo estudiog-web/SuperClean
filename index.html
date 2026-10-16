@@ -2,18 +2,15 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#116c66">
   <meta name="description" content="Higienização profissional de sofás, colchões, tapetes e outros estofados em Ibirité e região. Conheça a Super Clean e peça seu orçamento pelo WhatsApp.">
-
   <title>Super Clean | Higienização de estofados em Ibirité e região</title>
 
   <link rel="icon" type="image/png" href="favicon.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <meta property="og:locale" content="pt_BR">
@@ -23,6 +20,8 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&amp;fit=crop&amp;w=1200&amp;q=85">
 
   <style>
+    /* Tudo está neste arquivo. Mantenha logo.png e favicon.png na mesma pasta. */
+
     :root {
       --ink: #193b38;
       --muted: #576a65;
@@ -36,98 +35,39 @@
       --container: 1180px;
     }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 104px;
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: 104px; }
 
     body {
       margin: 0;
       color: var(--ink);
       background: var(--white);
-      font: 400 16px/1.7 "Manrope", system-ui, sans-serif;
+      font: 400 16px/1.7 'Manrope', system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
 
-    h1,
-    h2,
-    h3,
-    p,
-    ul,
-    ol,
-    figure {
-      margin: 0;
-    }
+    h1, h2, h3, p, ul, ol, figure { margin: 0; }
+    h1, h2, h3 { font-weight: 800; }
+    h1, h2 { text-wrap: balance; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button, a, input, select, textarea, summary { -webkit-tap-highlight-color: transparent; }
+    button { cursor: pointer; }
+    img { display: block; max-width: 100%; }
 
-    h1,
-    h2,
-    h3 {
-      font-weight: 800;
-    }
-
-    h1,
-    h2 {
-      text-wrap: balance;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    select,
-    textarea {
-      font: inherit;
-    }
-
-    button,
-    a,
-    input,
-    select,
-    textarea,
-    summary {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    button {
-      cursor: pointer;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    button:focus-visible,
-    a:focus-visible,
-    summary:focus-visible {
+    button:focus-visible, a:focus-visible, summary:focus-visible {
       outline: 3px solid #be7c2d;
       outline-offset: 5px;
     }
 
-    input:focus,
-    select:focus,
-    textarea:focus {
+    input:focus, select:focus, textarea:focus {
       outline: 2px solid var(--primary);
       outline-offset: 2px;
     }
 
-    ::selection {
-      color: var(--ink);
-      background: #cce9d3;
-    }
-
-    [hidden] {
-      display: none !important;
-    }
+    ::selection { color: var(--ink); background: #cce9d3; }
+    [hidden] { display: none !important; }
 
     .container {
       width: min(var(--container), calc(100% - 56px));
@@ -145,6 +85,8 @@
       flex: 0 0 auto;
     }
 
+    .icon-fill { stroke: none; fill: currentColor; }
+
     .skip-link {
       position: fixed;
       top: 12px;
@@ -157,9 +99,7 @@
       transform: translateY(-160%);
     }
 
-    .skip-link:focus {
-      transform: translateY(0);
-    }
+    .skip-link:focus { transform: translateY(0); }
 
     .eyebrow {
       display: flex;
@@ -174,7 +114,7 @@
     }
 
     .eyebrow::before {
-      content: "";
+      content: '';
       width: 24px;
       height: 2px;
       background: currentColor;
@@ -195,37 +135,13 @@
       transition: background .2s, color .2s, transform .2s;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .button-primary {
-      background: var(--primary);
-      color: white;
-    }
-
-    .button-primary:hover {
-      background: var(--primary-dark);
-    }
-
-    .button-outline {
-      color: var(--ink);
-      border-color: #bfcdc2;
-      background: transparent;
-    }
-
-    .button-outline:hover {
-      background: var(--mint);
-    }
-
-    .button-white {
-      color: var(--ink);
-      background: white;
-    }
-
-    .button-white:hover {
-      background: var(--mint);
-    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--primary); color: white; }
+    .button-primary:hover { background: var(--primary-dark); }
+    .button-outline { color: var(--ink); border-color: #bfcdc2; background: transparent; }
+    .button-outline:hover { background: var(--mint); }
+    .button-white { color: var(--ink); background: white; }
+    .button-white:hover { background: var(--mint); }
 
     .text-link {
       display: inline-flex;
@@ -242,7 +158,7 @@
       text-underline-offset: 5px;
     }
 
-    /* Barra superior */
+    /* Cabeçalho */
 
     .topbar {
       background: var(--ink);
@@ -258,31 +174,19 @@
       padding-block: 9px;
     }
 
-    .topbar p {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-
-    .topbar .icon {
-      width: 14px;
-      height: 14px;
-    }
-
-    /* Cabeçalho */
+    .topbar p { display: flex; align-items: center; gap: 7px; }
+    .topbar .icon { width: 14px; height: 14px; }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 100;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, .97);
+      background: rgba(255,255,255,.97);
     }
 
     @supports (backdrop-filter: blur(12px)) {
-      .site-header {
-        backdrop-filter: blur(12px);
-      }
+      .site-header { backdrop-filter: blur(12px); }
     }
 
     .header-inner {
@@ -358,9 +262,7 @@
       font-weight: 700;
     }
 
-    .navigation a:hover {
-      color: var(--primary);
-    }
+    .navigation a:hover { color: var(--primary); }
 
     .header-cta {
       min-height: 44px;
@@ -381,13 +283,9 @@
     }
 
     .menu-toggle .close-icon,
-    .menu-toggle[aria-expanded="true"] .menu-icon {
-      display: none;
-    }
+    .menu-toggle[aria-expanded="true"] .menu-icon { display: none; }
 
-    .menu-toggle[aria-expanded="true"] .close-icon {
-      display: block;
-    }
+    .menu-toggle[aria-expanded="true"] .close-icon { display: block; }
 
     /* Abertura */
 
@@ -404,10 +302,7 @@
       align-items: center;
     }
 
-    .hero .eyebrow {
-      font-size: 10px;
-      letter-spacing: 1.6px;
-    }
+    .hero .eyebrow { font-size: 10px; letter-spacing: 1.6px; }
 
     .hero h1 {
       font-size: clamp(40px, 4.7vw, 64px);
@@ -415,9 +310,7 @@
       letter-spacing: -2.8px;
     }
 
-    .hero h1 span {
-      color: var(--primary);
-    }
+    .hero h1 span { color: var(--primary); }
 
     .hero-description {
       max-width: 465px;
@@ -463,7 +356,7 @@
     }
 
     .hero-visual::before {
-      content: "";
+      content: '';
       position: absolute;
       inset: 0 20px 34px 0;
       border: 1px solid #c6d4c5;
@@ -509,20 +402,17 @@
       color: var(--primary);
     }
 
-    .photo-fallback p {
-      font-size: 23px;
-      font-weight: 800;
-    }
+    .photo-fallback p { font-size: 23px; font-weight: 800; }
 
     .photo-label {
       position: absolute;
       top: 23px;
       right: 20px;
       padding: 8px 12px;
-      border: 1px solid rgba(255, 255, 255, .7);
+      border: 1px solid rgba(255,255,255,.7);
       border-radius: 30px;
       color: #284a40;
-      background: rgba(255, 255, 255, .86);
+      background: rgba(255,255,255,.86);
       font-size: 9px;
       font-weight: 800;
       letter-spacing: 1.2px;
@@ -539,7 +429,7 @@
       right: 20px;
       padding: 17px 19px;
       border-radius: 13px;
-      background: rgba(255, 255, 255, .95);
+      background: rgba(255,255,255,.95);
       box-shadow: 0 8px 24px #173c2f0d;
     }
 
@@ -573,8 +463,6 @@
       font-size: 9px;
     }
 
-    /* Faixa de diferenciais */
-
     .trust-strip {
       border-block: 1px solid var(--line);
       background: #eef2e9;
@@ -597,9 +485,7 @@
       font-weight: 700;
     }
 
-    .trust-list li + li {
-      border-left: 1px solid #cedace;
-    }
+    .trust-list li + li { border-left: 1px solid #cedace; }
 
     .trust-list .icon {
       width: 21px;
@@ -607,11 +493,9 @@
       color: var(--primary);
     }
 
-    /* Serviços */
+    /* Serviços e atendimento */
 
-    .section {
-      padding: 86px 0;
-    }
+    .section { padding: 86px 0; }
 
     .section-heading {
       display: flex;
@@ -667,15 +551,8 @@
       border-radius: 14px;
     }
 
-    .service-icon .icon {
-      width: 27px;
-      height: 27px;
-    }
-
-    .service-card h3 {
-      font-size: 15px;
-      letter-spacing: -.4px;
-    }
+    .service-icon .icon { width: 27px; height: 27px; }
+    .service-card h3 { font-size: 15px; letter-spacing: -.4px; }
 
     .service-card p {
       margin: 11px 0 18px;
@@ -684,15 +561,8 @@
       line-height: 1.85;
     }
 
-    .service-card .text-link {
-      margin-top: auto;
-      font-size: 11px;
-    }
-
-    .service-card .text-link .icon {
-      width: 16px;
-      height: 16px;
-    }
+    .service-card .text-link { margin-top: auto; font-size: 11px; }
+    .service-card .text-link .icon { width: 16px; height: 16px; }
 
     .pet-note {
       display: flex;
@@ -712,15 +582,8 @@
       color: var(--primary);
     }
 
-    .pet-note strong {
-      color: var(--ink);
-    }
-
-    /* Como funciona */
-
-    .process {
-      background: var(--paper);
-    }
+    .pet-note strong { color: var(--ink); }
+    .process { background: var(--paper); }
 
     .process-layout {
       display: grid;
@@ -735,10 +598,7 @@
       color: var(--muted);
     }
 
-    .steps {
-      padding: 0;
-      list-style: none;
-    }
+    .steps { padding: 0; list-style: none; }
 
     .steps li {
       display: grid;
@@ -752,9 +612,7 @@
       border-top: 1px solid var(--line);
     }
 
-    .steps li:last-child {
-      padding-bottom: 0;
-    }
+    .steps li:last-child { padding-bottom: 0; }
 
     .step-number {
       font-size: 12px;
@@ -763,10 +621,7 @@
       padding-top: 3px;
     }
 
-    .steps h3 {
-      font-size: 17px;
-      letter-spacing: -.5px;
-    }
+    .steps h3 { font-size: 17px; letter-spacing: -.5px; }
 
     .steps p {
       margin-top: 8px;
@@ -774,12 +629,9 @@
       font-size: 12px;
     }
 
-    /* Trabalhos e Instagram */
+    /* Resultados reais são apresentados no Instagram da empresa. */
 
-    .portfolio {
-      color: white;
-      background: var(--ink);
-    }
+    .portfolio { color: white; background: var(--ink); }
 
     .portfolio-layout {
       display: grid;
@@ -788,13 +640,8 @@
       align-items: center;
     }
 
-    .portfolio .eyebrow {
-      color: #c5ddae;
-    }
-
-    .portfolio h2 {
-      max-width: 450px;
-    }
+    .portfolio .eyebrow { color: #c5ddae; }
+    .portfolio h2 { max-width: 450px; }
 
     .portfolio-description {
       max-width: 420px;
@@ -835,10 +682,7 @@
       color: var(--ink);
     }
 
-    .instagram-profile strong {
-      display: block;
-      font-size: 15px;
-    }
+    .instagram-profile strong { display: block; font-size: 15px; }
 
     .instagram-profile small {
       display: block;
@@ -875,10 +719,7 @@
       font-weight: 700;
     }
 
-    .instagram-topic .icon {
-      width: 28px;
-      height: 28px;
-    }
+    .instagram-topic .icon { width: 28px; height: 28px; }
 
     .instagram-caption {
       display: flex;
@@ -910,13 +751,8 @@
       font-size: 13px;
     }
 
-    .faq-list {
-      border-top: 1px solid var(--line);
-    }
-
-    .faq-list details {
-      border-bottom: 1px solid var(--line);
-    }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-list details { border-bottom: 1px solid var(--line); }
 
     .faq-list summary {
       display: flex;
@@ -930,21 +766,17 @@
       font-weight: 800;
     }
 
-    .faq-list summary::-webkit-details-marker {
-      display: none;
-    }
+    .faq-list summary::-webkit-details-marker { display: none; }
 
     .faq-list summary::after {
-      content: "+";
+      content: '+';
       color: var(--primary);
       font-size: 23px;
       line-height: 1;
       font-weight: 400;
     }
 
-    .faq-list details[open] summary::after {
-      content: "−";
-    }
+    .faq-list details[open] summary::after { content: '−'; }
 
     .faq-list details p {
       padding: 0 25px 24px 0;
@@ -955,9 +787,7 @@
 
     /* Orçamento */
 
-    .contact {
-      padding-top: 0;
-    }
+    .contact { padding-top: 0; }
 
     .contact-panel {
       display: grid;
@@ -983,9 +813,7 @@
       margin-top: 27px;
     }
 
-    .contact-detail > .icon {
-      color: var(--primary);
-    }
+    .contact-detail > .icon { color: var(--primary); }
 
     .contact-detail small {
       display: block;
@@ -1022,10 +850,7 @@
       color: var(--muted);
     }
 
-    .contact-online .text-link {
-      display: flex;
-      font-size: 12px;
-    }
+    .contact-online .text-link { display: flex; font-size: 12px; }
 
     .quote-form {
       padding: 25px;
@@ -1046,13 +871,8 @@
       gap: 16px;
     }
 
-    .field {
-      min-width: 0;
-    }
-
-    .field-full {
-      grid-column: 1 / -1;
-    }
+    .field { min-width: 0; }
+    .field-full { grid-column: 1 / -1; }
 
     .field label {
       display: block;
@@ -1067,9 +887,7 @@
       font-weight: 400;
     }
 
-    .field input,
-    .field select,
-    .field textarea {
+    .field input, .field select, .field textarea {
       display: block;
       width: 100%;
       min-height: 46px;
@@ -1081,10 +899,7 @@
       font-size: 12px;
     }
 
-    .field textarea {
-      min-height: 88px;
-      resize: vertical;
-    }
+    .field textarea { min-height: 88px; resize: vertical; }
 
     .field input::placeholder,
     .field textarea::placeholder {
@@ -1138,9 +953,7 @@
       font-size: 22px;
     }
 
-    .footer-brand .brand-tagline {
-      color: #c5d8c5;
-    }
+    .footer-brand .brand-tagline { color: #c5d8c5; }
 
     .footer-brand p {
       max-width: 290px;
@@ -1154,10 +967,7 @@
       font-size: 12px;
     }
 
-    .footer-column ul {
-      padding: 0;
-      list-style: none;
-    }
+    .footer-column ul { padding: 0; list-style: none; }
 
     .footer-column a {
       display: inline-flex;
@@ -1173,10 +983,7 @@
       text-underline-offset: 4px;
     }
 
-    .footer-column .icon {
-      width: 16px;
-      height: 16px;
-    }
+    .footer-column .icon { width: 16px; height: 16px; }
 
     .footer-bottom {
       display: flex;
@@ -1187,8 +994,6 @@
       border-top: 1px solid #3b5b50;
       font-size: 10px;
     }
-
-    /* WhatsApp flutuante */
 
     .floating-contact {
       position: fixed;
@@ -1211,133 +1016,48 @@
       transition: background .2s;
     }
 
-    .floating-contact:hover {
-      background: var(--primary-dark);
-    }
-
-    .floating-contact .icon {
-      width: 23px;
-      height: 23px;
-    }
+    .floating-contact:hover { background: var(--primary-dark); }
+    .floating-contact .icon { width: 23px; height: 23px; }
+    .mobile-contact { display: none; }
 
     /* Telas grandes */
 
     @media (min-width: 1400px) {
-      .hero {
-        padding-block: 88px 78px;
-      }
+      .hero { padding-block: 88px 78px; }
     }
 
-    /* Notebooks */
+    /* Computadores menores */
 
     @media (max-width: 1050px) {
-      .navigation ul {
-        gap: 17px;
-      }
-
-      .navigation a {
-        font-size: 11px;
-      }
-
-      .header-cta {
-        padding-inline: 12px;
-      }
-
-      .brand-name {
-        font-size: 17px;
-      }
-
-      .brand-tagline {
-        font-size: 7px;
-      }
-
-      .hero-grid {
-        gap: 35px;
-      }
-
-      .hero h1 {
-        font-size: 49px;
-      }
-
-      .hero-photo {
-        height: 410px;
-      }
-
-      .hero-buttons .button {
-        font-size: 12px;
-        padding-inline: 16px;
-      }
-
-      .services-grid {
-        gap: 12px;
-      }
-
-      .service-card {
-        padding: 23px 18px 18px;
-      }
-
-      .service-card h3 {
-        font-size: 13px;
-      }
-
-      .process-layout,
-      .faq-layout {
-        gap: 50px;
-      }
-
-      .portfolio-layout {
-        gap: 45px;
-      }
-
-      .contact-panel {
-        padding: 37px;
-        gap: 38px;
-      }
+      .navigation ul { gap: 17px; }
+      .navigation a { font-size: 11px; }
+      .header-cta { padding-inline: 12px; }
+      .brand-name { font-size: 17px; }
+      .brand-tagline { font-size: 7px; }
+      .hero-grid { gap: 35px; }
+      .hero h1 { font-size: 49px; }
+      .hero-photo { height: 410px; }
+      .hero-buttons .button { font-size: 12px; padding-inline: 16px; }
+      .services-grid { gap: 12px; }
+      .service-card { padding: 23px 18px 18px; }
+      .service-card h3 { font-size: 13px; }
+      .process-layout, .faq-layout { gap: 50px; }
+      .portfolio-layout { gap: 45px; }
+      .contact-panel { padding: 37px; gap: 38px; }
     }
 
-    /* Tablets */
+    /* Tablets e navegação móvel */
 
     @media (max-width: 850px) {
-      .container {
-        width: calc(100% - 40px);
-      }
-
-      .header-inner {
-        min-height: 76px;
-        flex-wrap: wrap;
-        gap: 0;
-      }
-
-      .brand-name {
-        font-size: 19px;
-      }
-
-      .brand-tagline {
-        font-size: 8px;
-      }
-
-      .header-cta {
-        display: none;
-      }
-
-      .menu-ready .menu-toggle {
-        display: flex;
-      }
-
-      .navigation {
-        width: 100%;
-        padding-block: 8px 17px;
-      }
-
-      .navigation ul {
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 5px 15px;
-      }
-
-      .navigation a {
-        font-size: 12px;
-      }
+      .container { width: calc(100% - 40px); }
+      .header-inner { min-height: 76px; flex-wrap: wrap; gap: 0; }
+      .brand-name { font-size: 19px; }
+      .brand-tagline { font-size: 8px; }
+      .header-cta { display: none; }
+      .menu-ready .menu-toggle { display: flex; }
+      .navigation { width: 100%; padding-block: 8px 17px; }
+      .navigation ul { justify-content: space-between; flex-wrap: wrap; gap: 5px 15px; }
+      .navigation a { font-size: 12px; }
 
       .menu-ready .navigation {
         display: none;
@@ -1351,425 +1071,188 @@
         box-shadow: 0 14px 20px #1b392409;
       }
 
-      .menu-ready .navigation.is-open {
-        display: block;
-      }
-
-      .menu-ready .navigation ul {
-        display: block;
-      }
-
-      .menu-ready .navigation a {
-        display: flex;
-        padding: 6px 4px;
-        font-size: 14px;
-      }
-
-      .hero {
-        padding-block: 45px;
-      }
-
-      .hero-grid {
-        gap: 30px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-        letter-spacing: -1.8px;
-      }
-
-      .hero-description {
-        font-size: 13px;
-      }
-
-      .hero .eyebrow {
-        font-size: 9px;
-        letter-spacing: 1px;
-      }
-
-      .hero-photo {
-        height: 390px;
-        border-top-left-radius: 75px;
-      }
-
-      .hero-visual::before {
-        border-top-left-radius: 85px;
-      }
-
-      .hero-buttons {
-        gap: 9px;
-      }
-
-      .hero-buttons .button {
-        width: 100%;
-      }
-
-      .hero-notes {
-        gap: 8px;
-      }
-
-      .hero-notes li {
-        font-size: 10px;
-      }
-
-      .photo-label {
-        font-size: 8px;
-        right: 13px;
-      }
-
-      .photo-note {
-        left: 12px;
-        right: 12px;
-        bottom: 12px;
-        padding: 13px;
-        gap: 10px;
-      }
-
-      .photo-note strong {
-        font-size: 11px;
-      }
-
-      .photo-note p {
-        font-size: 9px;
-      }
-
-      .photo-note > span {
-        width: 34px;
-        height: 34px;
-      }
-
-      .trust-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 0;
-      }
-
-      .trust-list li {
-        justify-content: flex-start;
-      }
-
-      .trust-list li:nth-child(3) {
-        border-left: 0;
-      }
-
-      .section {
-        padding-block: 65px;
-      }
-
-      .section-heading {
-        align-items: flex-start;
-        gap: 25px;
-      }
-
-      .section-intro {
-        max-width: 260px;
-        font-size: 12px;
-      }
-
-      .section h2 {
-        font-size: 32px;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-      }
-
-      .service-card {
-        padding: 25px;
-      }
-
-      .service-card h3 {
-        font-size: 16px;
-      }
-
-      .service-card p {
-        font-size: 13px;
-      }
-
-      .service-card .text-link {
-        font-size: 12px;
-      }
-
-      .process-layout,
-      .faq-layout {
-        grid-template-columns: 1fr 1.25fr;
-        gap: 35px;
-      }
-
-      .portfolio-layout {
-        gap: 30px;
-      }
-
-      .instagram-card {
-        padding: 20px;
-      }
-
-      .instagram-profile strong {
-        font-size: 13px;
-      }
-
-      .instagram-profile small {
-        font-size: 9px;
-      }
-
-      .instagram-topics {
-        gap: 7px;
-      }
-
-      .instagram-topic {
-        min-height: 90px;
-        font-size: 9px;
-      }
-
-      .instagram-caption {
-        font-size: 10px;
-      }
-
-      .contact {
-        padding-top: 0;
-      }
-
-      .contact-panel {
-        grid-template-columns: 1fr 1.2fr;
-        gap: 27px;
-        padding: 28px;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-        gap: 13px;
-      }
-
-      .quote-form {
-        padding: 21px;
-      }
-
-      .footer-top {
-        gap: 25px;
-      }
+      .menu-ready .navigation.is-open { display: block; }
+      .menu-ready .navigation ul { display: block; }
+      .menu-ready .navigation a { display: flex; padding: 6px 4px; font-size: 14px; }
+      .hero { padding-block: 45px; }
+      .hero-grid { gap: 30px; }
+      .hero h1 { font-size: 42px; letter-spacing: -1.8px; }
+      .hero-description { font-size: 13px; }
+      .hero .eyebrow { font-size: 9px; letter-spacing: 1px; }
+      .hero-photo { height: 390px; border-top-left-radius: 75px; }
+      .hero-visual::before { border-top-left-radius: 85px; }
+      .hero-buttons { gap: 9px; }
+      .hero-buttons .button { width: 100%; }
+      .hero-notes { gap: 8px; }
+      .hero-notes li { font-size: 10px; }
+      .photo-label { font-size: 8px; right: 13px; }
+      .photo-note { left: 12px; right: 12px; bottom: 12px; padding: 13px; gap: 10px; }
+      .photo-note strong { font-size: 11px; }
+      .photo-note p { font-size: 9px; }
+      .photo-note > span { width: 34px; height: 34px; }
+      .trust-list { grid-template-columns: repeat(2, 1fr); gap: 20px 0; }
+      .trust-list li { justify-content: flex-start; }
+      .trust-list li:nth-child(3) { border-left: 0; }
+      .section { padding-block: 65px; }
+      .section-heading { align-items: flex-start; gap: 25px; }
+      .section-intro { max-width: 260px; font-size: 12px; }
+      .section h2 { font-size: 32px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .service-card { padding: 25px; }
+      .service-card h3 { font-size: 16px; }
+      .service-card p { font-size: 13px; }
+      .service-card .text-link { font-size: 12px; }
+      .process-layout, .faq-layout { grid-template-columns: 1fr 1.25fr; gap: 35px; }
+      .portfolio-layout { gap: 30px; }
+      .instagram-card { padding: 20px; }
+      .instagram-profile strong { font-size: 13px; }
+      .instagram-profile small { font-size: 9px; }
+      .instagram-topics { gap: 7px; }
+      .instagram-topic { min-height: 90px; font-size: 9px; }
+      .instagram-caption { font-size: 10px; }
+      .contact { padding-top: 0; }
+      .contact-panel { grid-template-columns: 1fr 1.2fr; gap: 27px; padding: 28px; }
+      .form-grid { grid-template-columns: 1fr; gap: 13px; }
+      .quote-form { padding: 21px; }
+      .footer-top { gap: 25px; }
     }
 
     /* Celulares */
 
     @media (max-width: 620px) {
-      html {
-        scroll-padding-top: 91px;
-      }
-
-      .container {
-        width: calc(100% - 36px);
-      }
-
-      .topbar .container {
-        justify-content: center;
-        padding-block: 8px;
-      }
-
-      .topbar p:last-child {
-        display: none;
-      }
-
-      .topbar {
-        font-size: 10px;
-      }
-
-      .header-inner {
-        min-height: 74px;
-      }
-
-      .brand-image {
-        width: 41px;
-        height: 41px;
-      }
-
-      .brand-name {
-        font-size: 18px;
-      }
-
-      .brand-tagline {
-        font-size: 7px;
-      }
-
-      .menu-ready .navigation {
-        left: -18px;
-        width: calc(100% + 36px);
-        padding-inline: 18px;
-      }
-
-      .hero {
-        padding-block: 38px 29px;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 29px;
-      }
+      html { scroll-padding-top: 91px; }
+      .container { width: calc(100% - 36px); }
+      .topbar .container { justify-content: center; padding-block: 8px; }
+      .topbar p:last-child { display: none; }
+      .topbar { font-size: 10px; }
+      .header-inner { min-height: 74px; }
+      .brand-image { width: 41px; height: 41px; }
+      .brand-name { font-size: 18px; }
+      .brand-tagline { font-size: 7px; }
+      .menu-ready .navigation { left: -18px; width: calc(100% + 36px); padding-inline: 18px; }
+      .hero { padding-block: 26px 26px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 20px; }
 
       .hero h1 {
-        font-size: clamp(38px, 10.2vw, 56px);
+        font-size: clamp(30px, 8.4vw, 46px);
         line-height: 1.13;
-        letter-spacing: -1.9px;
+        letter-spacing: -1.5px;
       }
 
       .hero .eyebrow {
-        margin-bottom: 17px;
-        font-size: 9px;
-        letter-spacing: 1.3px;
+        margin-bottom: 12px;
+        font-size: 10px;
+        line-height: 1.5;
+        letter-spacing: 1.1px;
       }
 
       .hero-description {
-        margin-top: 19px;
+        margin-top: 14px;
         max-width: 430px;
         font-size: 14px;
-        line-height: 1.8;
+        line-height: 1.7;
       }
 
       .hero-buttons {
-        margin-top: 24px;
+        margin-top: 18px;
         flex-direction: column;
-        gap: 10px;
+        gap: 2px;
       }
 
-      .hero-buttons .button {
-        font-size: 13px;
+      .hero-buttons .button { font-size: 13px; }
+
+      .hero-buttons .button-outline {
+        align-self: center;
+        width: auto;
+        min-height: 44px;
+        padding: 9px 12px;
+        border-color: transparent;
+        border-radius: 6px;
+        color: var(--primary);
+      }
+
+      .hero-buttons .button-outline:hover {
+        background: transparent;
+        text-decoration: underline;
+        text-underline-offset: 4px;
       }
 
       .hero-notes {
-        margin-top: 18px;
-        gap: 9px 17px;
+        margin-top: 10px;
+        gap: 6px 14px;
+        color: var(--ink);
       }
 
-      .hero-notes li {
-        font-size: 10px;
-      }
-
-      .hero-visual {
-        padding-top: 9px;
-        padding-left: 9px;
-      }
+      .hero-notes li { font-size: 12px; line-height: 1.5; }
+      .hero-visual { padding-top: 9px; padding-left: 9px; }
 
       .hero-photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         height: auto;
-        aspect-ratio: 1.22;
-        border-top-left-radius: 66px;
+        min-height: 220px;
+        aspect-ratio: auto;
+        border-top-left-radius: 48px;
+      }
+
+      .hero-photo > img {
+        flex: none;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.75;
+        object-position: center 72%;
       }
 
       .hero-visual::before {
-        inset: 0 15px 28px 0;
-        border-top-left-radius: 74px;
+        inset: 0 15px 30px 0;
+        border-top-left-radius: 56px;
       }
 
       .photo-label {
-        top: 14px;
-        right: 14px;
-        padding: 7px 10px;
+        top: 12px;
+        right: 12px;
+        padding: 6px 9px;
+        font-size: 9px;
+        letter-spacing: .8px;
       }
 
       .photo-note {
+        position: relative;
+        inset: auto;
+        flex: none;
         padding: 12px 13px;
+        border-radius: 0;
+        background: white;
+        box-shadow: none;
       }
 
-      .photo-note strong {
-        font-size: 11px;
-      }
-
-      .photo-note p {
-        font-size: 9px;
-      }
+      .photo-note strong { font-size: 12px; }
+      .photo-note p { font-size: 11px; line-height: 1.5; }
 
       .hero-visual figcaption {
         margin-top: 8px;
-        font-size: 8px;
-      }
-
-      .trust-list {
-        gap: 17px 0;
-        padding-block: 21px;
-      }
-
-      .trust-list li {
-        gap: 8px;
-        padding-inline: 7px;
-        font-size: 9px;
-      }
-
-      .trust-list .icon {
-        width: 18px;
-        height: 18px;
-      }
-
-      .section {
-        padding-block: 50px;
-      }
-
-      .eyebrow {
-        font-size: 9px;
-        letter-spacing: 1.5px;
-        margin-bottom: 13px;
-      }
-
-      .section h2 {
-        font-size: 31px;
-        letter-spacing: -1px;
-      }
-
-      .section-heading {
-        display: block;
-        margin-bottom: 26px;
-      }
-
-      .section-intro {
-        max-width: 100%;
-        margin-top: 16px;
-        font-size: 13px;
-      }
-
-      .services-grid {
-        gap: 11px;
-      }
-
-      .service-card {
-        padding: 20px 15px 15px;
-        border-radius: 12px;
-      }
-
-      .service-icon {
-        width: 44px;
-        height: 44px;
-        margin-bottom: 17px;
-        border-radius: 12px;
-      }
-
-      .service-icon .icon {
-        width: 24px;
-        height: 24px;
-      }
-
-      .service-card h3 {
-        font-size: 13px;
+        font-size: 10px;
         line-height: 1.5;
       }
 
-      .service-card p {
-        margin-block: 9px 13px;
-        font-size: 11px;
-        line-height: 1.8;
-      }
-
-      .service-card .text-link {
-        gap: 5px;
-        font-size: 10px;
-      }
-
-      .pet-note {
-        padding: 17px;
-        align-items: flex-start;
-        font-size: 11px;
-      }
-
-      .pet-note > .icon {
-        margin-top: 3px;
-      }
+      .trust-list { gap: 17px 0; padding-block: 21px; }
+      .trust-list li { gap: 8px; padding-inline: 7px; font-size: 9px; }
+      .trust-list .icon { width: 18px; height: 18px; }
+      .section { padding-block: 50px; }
+      .eyebrow { font-size: 9px; letter-spacing: 1.5px; margin-bottom: 13px; }
+      .section h2 { font-size: 31px; letter-spacing: -1px; }
+      .section-heading { display: block; margin-bottom: 26px; }
+      .section-intro { max-width: 100%; margin-top: 16px; font-size: 13px; }
+      .services-grid { gap: 11px; }
+      .service-card { padding: 20px 15px 15px; border-radius: 12px; }
+      .service-icon { width: 44px; height: 44px; margin-bottom: 17px; border-radius: 12px; }
+      .service-icon .icon { width: 24px; height: 24px; }
+      .service-card h3 { font-size: 13px; line-height: 1.5; }
+      .service-card p { margin-block: 9px 13px; font-size: 11px; line-height: 1.8; }
+      .service-card .text-link { gap: 5px; font-size: 10px; }
+      .pet-note { padding: 17px; align-items: flex-start; font-size: 11px; }
+      .pet-note > .icon { margin-top: 3px; }
 
       .process-layout,
       .portfolio-layout,
@@ -1779,139 +1262,39 @@
         gap: 30px;
       }
 
-      .process-description {
-        max-width: 100%;
-        margin-block: 18px 5px;
-        font-size: 13px;
-      }
-
-      .steps li {
-        grid-template-columns: 28px 1fr;
-        gap: 15px;
-        padding-bottom: 21px;
-      }
-
-      .steps li + li {
-        padding-top: 21px;
-      }
-
-      .steps h3 {
-        font-size: 16px;
-      }
-
-      .steps p {
-        font-size: 12px;
-      }
-
-      .portfolio-description {
-        margin-block: 18px 22px;
-        font-size: 13px;
-      }
-
-      .instagram-card {
-        padding: 22px;
-      }
-
-      .instagram-profile strong {
-        font-size: 14px;
-      }
-
-      .instagram-profile small {
-        font-size: 10px;
-      }
-
-      .instagram-topic {
-        min-height: 100px;
-        font-size: 10px;
-      }
-
-      .instagram-caption {
-        font-size: 11px;
-      }
-
-      .faq-intro {
-        max-width: 100%;
-        font-size: 13px;
-        margin-top: 17px;
-      }
-
-      .faq-list summary {
-        padding-block: 20px;
-        font-size: 12px;
-      }
-
-      .faq-list details p {
-        font-size: 12px;
-      }
-
-      .contact {
-        padding-top: 0;
-      }
-
-      .contact-panel {
-        padding: 28px 21px 21px;
-        border-radius: 18px;
-      }
-
-      .contact-description {
-        max-width: 100%;
-        margin-top: 18px;
-      }
-
-      .contact-detail {
-        margin-top: 23px;
-      }
-
-      .contact-location {
-        margin-top: 13px;
-      }
-
-      .contact-online {
-        margin-top: 13px;
-      }
-
-      .quote-form {
-        padding: 20px 17px;
-      }
+      .process-description { max-width: 100%; margin-block: 18px 5px; font-size: 13px; }
+      .steps li { grid-template-columns: 28px 1fr; gap: 15px; padding-bottom: 21px; }
+      .steps li + li { padding-top: 21px; }
+      .steps h3 { font-size: 16px; }
+      .steps p { font-size: 12px; }
+      .portfolio-description { margin-block: 18px 22px; font-size: 13px; }
+      .instagram-card { padding: 22px; }
+      .instagram-profile strong { font-size: 14px; }
+      .instagram-profile small { font-size: 10px; }
+      .instagram-topic { min-height: 100px; font-size: 10px; }
+      .instagram-caption { font-size: 11px; }
+      .faq-intro { max-width: 100%; font-size: 13px; margin-top: 17px; }
+      .faq-list summary { padding-block: 20px; font-size: 12px; }
+      .faq-list details p { font-size: 12px; }
+      .contact { padding-top: 0; }
+      .contact-panel { padding: 28px 21px 21px; border-radius: 18px; }
+      .contact-description { max-width: 100%; margin-top: 18px; }
+      .contact-detail { margin-top: 23px; }
+      .contact-location { margin-top: 13px; }
+      .contact-online { margin-top: 13px; }
+      .quote-form { padding: 20px 17px; }
 
       .field input,
       .field select,
-      .field textarea {
-        font-size: 16px;
-      }
+      .field textarea { font-size: 16px; }
 
-      .quote-form .button {
-        font-size: 12px;
-        padding-inline: 10px;
-      }
-
-      .form-note {
-        font-size: 10px;
-      }
-
-      .footer-top {
-        grid-template-columns: 1fr 1fr;
-        gap: 28px 22px;
-        padding-bottom: 28px;
-      }
-
-      .footer-brand {
-        grid-column: 1 / -1;
-      }
-
-      .footer-brand p {
-        max-width: 100%;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        padding-right: 49px;
-      }
-
-      .site-footer {
-        padding-top: 34px;
-        padding-bottom: max(25px, env(safe-area-inset-bottom));
-      }
+      .quote-form .button { font-size: 12px; padding-inline: 10px; }
+      .form-note { font-size: 10px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 28px 22px; padding-bottom: 28px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-brand p { max-width: 100%; }
+      .footer-bottom { flex-direction: column; padding-right: 49px; }
+      .site-footer { padding-top: 34px; padding-bottom: max(25px, env(safe-area-inset-bottom)); }
 
       .floating-contact {
         right: 15px;
@@ -1921,67 +1304,63 @@
         padding: 0;
       }
 
-      .floating-contact span {
-        display: none;
-      }
-
-      .floating-contact .icon {
-        width: 26px;
-        height: 26px;
-      }
+      .floating-contact span { display: none; }
+      .floating-contact .icon { width: 26px; height: 26px; }
     }
 
+    /* Contato fixo exclusivo de telas pequenas */
+
+    @media (max-width: 850px) {
+      .menu-ready .floating-contact { display: none; }
+
+      .mobile-contact {
+        display: block;
+        position: fixed;
+        z-index: 95;
+        inset: auto 0 0;
+        padding: 10px 18px calc(10px + env(safe-area-inset-bottom, 0px));
+        border-top: 1px solid var(--line);
+        background: rgba(255,255,255,.98);
+        box-shadow: 0 -5px 22px #193b3812;
+      }
+
+      .mobile-contact .button {
+        display: flex;
+        width: 100%;
+        max-width: 580px;
+        min-height: 48px;
+        margin-inline: auto;
+        padding-block: 11px;
+        font-size: 14px;
+      }
+
+      .menu-ready .site-footer {
+        padding-bottom: calc(98px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .menu-ready .footer-bottom { padding-right: 0; }
+      html { scroll-padding-bottom: 90px; }
+    }
+
+    /* Celulares menores */
+
     @media (max-width: 360px) {
-      .container {
-        width: calc(100% - 30px);
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .brand-name {
-        font-size: 16px;
-      }
-
-      .brand-tagline {
-        font-size: 6px;
-      }
-
-      .trust-list li {
-        font-size: 8px;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        padding: 22px;
-      }
-
-      .service-card h3 {
-        font-size: 16px;
-      }
-
-      .service-card p,
-      .service-card .text-link {
-        font-size: 12px;
-      }
-
-      .contact-panel {
-        padding-inline: 15px;
-      }
+      .container { width: calc(100% - 30px); }
+      .hero h1 { font-size: clamp(27px, 8.3vw, 30px); }
+      .brand-name { font-size: 16px; }
+      .brand-tagline { font-size: 6px; }
+      .trust-list li { font-size: 8px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { padding: 22px; }
+      .service-card h3 { font-size: 16px; }
+      .service-card p, .service-card .text-link { font-size: 12px; }
+      .contact-panel { padding-inline: 15px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
+      html { scroll-behavior: auto; }
 
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         animation: none !important;
         transition: none !important;
       }
@@ -1991,15 +1370,10 @@
 
 <body>
 
-  <!-- Ícones -->
+  <!-- Ícones locais -->
 
-  <svg xmlns="http://www.w3.org/2000/svg"
-       width="0"
-       height="0"
-       aria-hidden="true"
-       style="position:absolute;overflow:hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
     <defs>
-
       <symbol id="i-arrow" viewBox="0 0 24 24">
         <path d="M5 12h14m-6-6 6 6-6 6"/>
       </symbol>
@@ -2077,28 +1451,20 @@
         <path d="M21 11.6a9 9 0 0 1-13.3 8L3 21l1.4-4.5A9 9 0 1 1 21 11.6Z"/>
         <path d="m8 7 1.6 3-1.1 1.1a9.5 9.5 0 0 0 4.4 4.4L14 14.4l3 1.6c-1 3-4.7 1.7-7.6-1.2S5.1 8 8 7Z"/>
       </symbol>
-
     </defs>
   </svg>
 
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- Barra superior -->
-
   <div class="topbar">
     <div class="container">
       <p>
-        <svg class="icon" aria-hidden="true">
-          <use href="#i-pin"/>
-        </svg>
+        <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
         Ibirité, Sarzedo, Mário Campos e região
       </p>
-
       <p>Cuidado profissional, no conforto da sua casa.</p>
     </div>
   </div>
-
-  <!-- Cabeçalho -->
 
   <header class="site-header" id="header">
     <div class="container header-inner">
@@ -2112,7 +1478,6 @@
             alt=""
             onerror="this.hidden=true;this.nextElementSibling.removeAttribute('hidden');"
           >
-
           <svg class="icon" aria-hidden="true" hidden>
             <use href="#i-sofa"/>
           </svg>
@@ -2135,7 +1500,6 @@
         <svg class="icon menu-icon" aria-hidden="true">
           <use href="#i-menu"/>
         </svg>
-
         <svg class="icon close-icon" aria-hidden="true">
           <use href="#i-close"/>
         </svg>
@@ -2156,9 +1520,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <svg class="icon" aria-hidden="true">
-          <use href="#i-whatsapp"/>
-        </svg>
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
         Solicitar orçamento
       </a>
 
@@ -2166,8 +1528,6 @@
   </header>
 
   <main id="conteudo">
-
-    <!-- Apresentação -->
 
     <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
@@ -2182,38 +1542,28 @@
 
           <p class="hero-description">
             Higienização profissional de sofás, colchões e outros estofados.
-            Mais cuidado com o que faz parte da sua casa, com atendimento
-            em Ibirité e região.
+            Mais cuidado com o que faz parte da sua casa, com atendimento em Ibirité e região.
           </p>
 
           <div class="hero-buttons">
-            <a class="button button-primary" href="#orcamento">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-whatsapp"/>
-              </svg>
+            <a class="button button-primary" id="hero-quote" href="#orcamento">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
               Pedir meu orçamento
             </a>
 
             <a class="button button-outline" href="#servicos">
               Conhecer os serviços
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-arrow"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
 
           <ul class="hero-notes">
             <li>
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-check"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
               Atendimento em domicílio
             </li>
-
             <li>
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-check"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
               Orçamento personalizado
             </li>
           </ul>
@@ -2223,9 +1573,7 @@
           <div class="hero-photo">
 
             <div class="photo-fallback" aria-hidden="true">
-              <svg class="icon">
-                <use href="#i-sofa"/>
-              </svg>
+              <svg class="icon"><use href="#i-sofa"/></svg>
               <p>Um novo cuidado<br>para o seu estofado.</p>
             </div>
 
@@ -2242,9 +1590,7 @@
 
             <div class="photo-note">
               <span>
-                <svg class="icon" aria-hidden="true">
-                  <use href="#i-spark"/>
-                </svg>
+                <svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg>
               </span>
 
               <div>
@@ -2263,43 +1609,26 @@
       </div>
     </section>
 
-    <!-- Diferenciais -->
-
     <div class="trust-strip">
       <ul class="container trust-list">
-
         <li>
-          <svg class="icon" aria-hidden="true">
-            <use href="#i-sofa"/>
-          </svg>
+          <svg class="icon" aria-hidden="true"><use href="#i-sofa"/></svg>
           Cuidado com o seu estofado
         </li>
-
         <li>
-          <svg class="icon" aria-hidden="true">
-            <use href="#i-pin"/>
-          </svg>
+          <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
           Atendimento no seu endereço
         </li>
-
         <li>
-          <svg class="icon" aria-hidden="true">
-            <use href="#i-clock"/>
-          </svg>
+          <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
           Agendamento combinado
         </li>
-
         <li>
-          <svg class="icon" aria-hidden="true">
-            <use href="#i-message"/>
-          </svg>
+          <svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>
           Contato direto pelo WhatsApp
         </li>
-
       </ul>
     </div>
-
-    <!-- Serviços -->
 
     <section class="section services" id="servicos" aria-labelledby="services-title">
       <div class="container">
@@ -2307,11 +1636,7 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Nossos serviços</p>
-
-            <h2 id="services-title">
-              Mais cuidado para cada<br>
-              canto da sua casa.
-            </h2>
+            <h2 id="services-title">Mais cuidado para cada<br>canto da sua casa.</h2>
           </div>
 
           <p class="section-intro">
@@ -2324,9 +1649,7 @@
 
           <article class="service-card">
             <span class="service-icon">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-sofa"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-sofa"/></svg>
             </span>
 
             <h3>Sofás e poltronas</h3>
@@ -2336,75 +1659,51 @@
               ao tecido e às condições do seu estofado.
             </p>
 
-            <a
-              class="text-link"
-              href="#orcamento"
-              data-service="Sofá ou poltrona"
-            >
+            <a class="text-link" href="#orcamento" data-service="Sofá ou poltrona">
               Quero higienizar
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-arrow"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </article>
 
           <article class="service-card">
             <span class="service-icon">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-bed"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-bed"/></svg>
             </span>
 
             <h3>Colchões</h3>
 
             <p>
-              Cuidado com a limpeza da superfície e das sujeiras
-              acumuladas no uso, para renovar seu espaço de descanso.
+              Cuidado com a limpeza da superfície e das sujeiras acumuladas
+              no uso, para renovar seu espaço de descanso.
             </p>
 
-            <a
-              class="text-link"
-              href="#orcamento"
-              data-service="Colchão"
-            >
+            <a class="text-link" href="#orcamento" data-service="Colchão">
               Quero higienizar
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-arrow"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </article>
 
           <article class="service-card">
             <span class="service-icon">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-rug"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-rug"/></svg>
             </span>
 
             <h3>Tapetes</h3>
 
             <p>
-              Higienização conforme o material, as dimensões e as
-              necessidades da peça. Consulte a avaliação para o seu tapete.
+              Higienização conforme o material, as dimensões e as necessidades
+              da peça. Consulte a avaliação para o seu tapete.
             </p>
 
-            <a
-              class="text-link"
-              href="#orcamento"
-              data-service="Tapete"
-            >
+            <a class="text-link" href="#orcamento" data-service="Tapete">
               Quero higienizar
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-arrow"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </article>
 
           <article class="service-card">
             <span class="service-icon">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-baby"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-baby"/></svg>
             </span>
 
             <h3>Linha baby</h3>
@@ -2420,45 +1719,32 @@
               data-service="Carrinho, cadeirinha ou bebê conforto"
             >
               Quero higienizar
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-arrow"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </article>
 
         </div>
 
         <div class="pet-note" id="saude">
-          <svg class="icon" aria-hidden="true">
-            <use href="#i-paw"/>
-          </svg>
+          <svg class="icon" aria-hidden="true"><use href="#i-paw"/></svg>
 
           <p>
             <strong>Tem pets em casa?</strong>
-            Conte pra gente sobre pelos, manchas e odores na hora do
-            orçamento. Assim, avaliamos o cuidado indicado para o seu estofado.
+            Conte pra gente sobre pelos, manchas e odores na hora do orçamento.
+            Assim, avaliamos o cuidado indicado para o seu estofado.
           </p>
         </div>
 
       </div>
     </section>
 
-    <!-- Como funciona -->
-
-    <section
-      class="section process"
-      id="como-funciona"
-      aria-labelledby="process-title"
-    >
+    <section class="section process" id="como-funciona" aria-labelledby="process-title">
       <div class="container process-layout">
 
         <div>
           <p class="eyebrow">Simples, do começo ao fim</p>
 
-          <h2 id="process-title">
-            Você chama.<br>
-            A gente cuida.
-          </h2>
+          <h2 id="process-title">Você chama.<br>A gente cuida.</h2>
 
           <p class="process-description">
             Um atendimento próximo, com as informações que você precisa
@@ -2467,9 +1753,7 @@
 
           <a class="text-link" href="#orcamento">
             Vamos conversar?
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-arrow"/>
-            </svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
         </div>
 
@@ -2477,23 +1761,19 @@
 
           <li>
             <span class="step-number" aria-hidden="true">01 /</span>
-
             <div>
               <h3>Mostre o que precisa de cuidado</h3>
-
               <p>
-                Envie fotos da peça, informe o tamanho e diga seu bairro
-                e cidade. Pode contar também sobre manchas ou odores.
+                Envie fotos da peça, informe o tamanho e diga seu bairro e cidade.
+                Pode contar também sobre manchas ou odores.
               </p>
             </div>
           </li>
 
           <li>
             <span class="step-number" aria-hidden="true">02 /</span>
-
             <div>
               <h3>Combinamos todos os detalhes</h3>
-
               <p>
                 Você recebe o orçamento e as orientações. O serviço,
                 o valor e o horário são confirmados antes do atendimento.
@@ -2503,13 +1783,11 @@
 
           <li>
             <span class="step-number" aria-hidden="true">03 /</span>
-
             <div>
               <h3>Levamos o cuidado até você</h3>
-
               <p>
-                Realizamos a higienização no endereço combinado e
-                orientamos sobre a secagem e os cuidados após a limpeza.
+                Realizamos a higienização no endereço combinado e orientamos
+                sobre a secagem e os cuidados após a limpeza.
               </p>
             </div>
           </li>
@@ -2519,27 +1797,17 @@
       </div>
     </section>
 
-    <!-- Trabalhos no Instagram -->
-
-    <section
-      class="section portfolio"
-      id="depoimentos"
-      aria-labelledby="portfolio-title"
-    >
+    <section class="section portfolio" id="depoimentos" aria-labelledby="portfolio-title">
       <div class="container portfolio-layout">
 
         <div>
           <p class="eyebrow">O cuidado aparece nos detalhes</p>
 
-          <h2 id="portfolio-title">
-            Conheça de perto<br>
-            o nosso trabalho.
-          </h2>
+          <h2 id="portfolio-title">Conheça de perto<br>o nosso trabalho.</h2>
 
           <p class="portfolio-description">
-            Confira os registros dos nossos atendimentos, os bastidores
-            da limpeza e os resultados de antes e depois no Instagram
-            da Super Clean.
+            Confira os registros dos nossos atendimentos, os bastidores da limpeza
+            e os resultados de antes e depois no Instagram da Super Clean.
           </p>
 
           <a
@@ -2548,9 +1816,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-instagram"/>
-            </svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
             Ver nossos trabalhos
           </a>
         </div>
@@ -2562,12 +1828,10 @@
           rel="noopener noreferrer"
           aria-label="Visitar @super_clean.oficial no Instagram"
         >
-          <div class="instagram-profile">
 
+          <div class="instagram-profile">
             <span class="instagram-mark">
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-instagram"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
             </span>
 
             <div>
@@ -2575,43 +1839,29 @@
               <small>@super_clean.oficial</small>
             </div>
 
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-arrow"/>
-            </svg>
-
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </div>
 
           <div class="instagram-topics" aria-hidden="true">
-
             <div class="instagram-topic">
-              <svg class="icon">
-                <use href="#i-sofa"/>
-              </svg>
+              <svg class="icon"><use href="#i-sofa"/></svg>
               Antes e depois
             </div>
 
             <div class="instagram-topic">
-              <svg class="icon">
-                <use href="#i-camera"/>
-              </svg>
+              <svg class="icon"><use href="#i-camera"/></svg>
               Bastidores
             </div>
 
             <div class="instagram-topic">
-              <svg class="icon">
-                <use href="#i-spark"/>
-              </svg>
+              <svg class="icon"><use href="#i-spark"/></svg>
               Nossos cuidados
             </div>
-
           </div>
 
           <div class="instagram-caption">
             <span>Seu próximo estofado renovado pode estar aqui.</span>
-
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-arrow"/>
-            </svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </div>
 
         </a>
@@ -2619,22 +1869,16 @@
       </div>
     </section>
 
-    <!-- Perguntas frequentes -->
-
     <section class="section faq" id="duvidas" aria-labelledby="faq-title">
       <div class="container faq-layout">
 
         <div>
           <p class="eyebrow">Antes de contratar</p>
-
-          <h2 id="faq-title">
-            Dúvidas comuns.<br>
-            Respostas claras.
-          </h2>
+          <h2 id="faq-title">Dúvidas comuns.<br>Respostas claras.</h2>
 
           <p class="faq-intro">
-            Cada estofado tem sua história. Se a sua dúvida não estiver
-            aqui, é só chamar no WhatsApp.
+            Cada estofado tem sua história. Se a sua dúvida não estiver aqui,
+            é só chamar no WhatsApp.
           </p>
         </div>
 
@@ -2642,53 +1886,46 @@
 
           <details name="faq">
             <summary>Quanto custa a higienização?</summary>
-
             <p>
-              O orçamento considera o tipo de peça, o tamanho, as condições
-              do tecido e a localização. Envie fotos e informe seu bairro
-              e cidade para receber o valor do seu atendimento.
+              O orçamento considera o tipo de peça, o tamanho, as condições do tecido
+              e a localização. Envie fotos e informe seu bairro e cidade para receber
+              o valor do seu atendimento.
             </p>
           </details>
 
           <details name="faq">
             <summary>Vocês atendem na minha casa?</summary>
-
             <p>
-              Sim! Atendemos em domicílio em Ibirité e região.
-              Envie seu bairro e cidade para confirmarmos a disponibilidade
-              e combinarmos o atendimento no seu endereço.
+              Sim! Atendemos em domicílio em Ibirité e região. Envie seu bairro e cidade
+              para confirmarmos a disponibilidade e combinarmos o atendimento
+              no seu endereço.
             </p>
           </details>
 
           <details name="faq">
             <summary>A limpeza remove qualquer mancha?</summary>
-
             <p>
-              O resultado depende do tipo de mancha, do tecido, do tempo
-              e de produtos já utilizados na peça. Avaliamos as condições
-              e explicamos as possibilidades antes do serviço, sem prometer
-              a remoção de todas as manchas.
+              O resultado depende do tipo de mancha, do tecido, do tempo e de produtos
+              já utilizados na peça. Avaliamos as condições e explicamos as possibilidades
+              antes do serviço, sem prometer a remoção de todas as manchas.
             </p>
           </details>
 
           <details name="faq">
             <summary>Quanto tempo leva para secar?</summary>
-
             <p>
-              O tempo de secagem varia conforme o tecido, a ventilação,
-              o clima e as condições do ambiente. No atendimento,
-              orientamos sobre o tempo estimado e quando a peça poderá
-              voltar a ser utilizada.
+              O tempo de secagem varia conforme o tecido, a ventilação, o clima
+              e as condições do ambiente. No atendimento, orientamos sobre o tempo
+              estimado e quando a peça poderá voltar a ser utilizada.
             </p>
           </details>
 
           <details name="faq">
             <summary>Como faço para agendar?</summary>
-
             <p>
-              Peça seu orçamento pelo WhatsApp. Após alinharmos o serviço
-              e o valor, combinamos uma data e um horário disponíveis.
-              Você também pode consultar nosso link de agendamento online.
+              Peça seu orçamento pelo WhatsApp. Após alinharmos o serviço e o valor,
+              combinamos uma data e um horário disponíveis. Você também pode consultar
+              nosso link de agendamento online.
             </p>
           </details>
 
@@ -2697,36 +1934,24 @@
       </div>
     </section>
 
-    <!-- Contato e orçamento -->
-
-    <section
-      class="section contact"
-      id="orcamento"
-      aria-labelledby="contact-title"
-    >
+    <section class="section contact" id="orcamento" aria-labelledby="contact-title">
       <div class="container contact-panel">
 
         <div>
           <p class="eyebrow">Seu estofado merece esse cuidado</p>
 
-          <h2 id="contact-title">
-            Vamos renovar<br>
-            o seu espaço?
-          </h2>
+          <h2 id="contact-title">Vamos renovar<br>o seu espaço?</h2>
 
           <p class="contact-description">
-            Conte o que você precisa. Vamos conversar sobre a sua peça
-            e preparar um orçamento para o seu atendimento.
+            Conte o que você precisa. Vamos conversar sobre a sua peça e preparar
+            um orçamento para o seu atendimento.
           </p>
 
           <div class="contact-detail">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-whatsapp"/>
-            </svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
 
             <div>
               <small>Fale diretamente com a Super Clean</small>
-
               <a
                 href="https://wa.me/5531981116900"
                 target="_blank"
@@ -2738,10 +1963,7 @@
           </div>
 
           <p class="contact-location">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-pin"/>
-            </svg>
-
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
             Ibirité, Sarzedo, Mário Campos e região.<br>
             Consulte o atendimento para seu endereço.
           </p>
@@ -2756,10 +1978,7 @@
               rel="noopener noreferrer"
             >
               Consultar agendamento online
-
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-arrow"/>
-              </svg>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
         </div>
@@ -2785,7 +2004,6 @@
 
             <div class="field field-full">
               <label for="quote-name">Seu nome</label>
-
               <input
                 id="quote-name"
                 type="text"
@@ -2811,7 +2029,6 @@
 
             <div class="field">
               <label for="quote-location">Bairro e cidade</label>
-
               <input
                 id="quote-location"
                 type="text"
@@ -2838,9 +2055,7 @@
           </div>
 
           <button class="button button-primary" type="submit">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-whatsapp"/>
-            </svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
             Pedir orçamento no WhatsApp
           </button>
 
@@ -2849,28 +2064,19 @@
             O valor e a disponibilidade são confirmados no atendimento.
           </p>
 
-          <p
-            class="form-status"
-            id="quote-status"
-            role="status"
-            hidden
-          >
+          <p class="form-status" id="quote-status" role="status" hidden>
             Seu pedido está pronto. Se o WhatsApp não abriu,
-
             <a
               id="quote-fallback"
               href="https://wa.me/5531981116900"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              continue por aqui
-            </a>.
+            >continue por aqui</a>.
           </p>
 
           <noscript>
             <p class="form-note">
-              Envie também seu nome, a peça e seu bairro
-              na conversa do WhatsApp.
+              Envie também seu nome, a peça e seu bairro na conversa do WhatsApp.
             </p>
           </noscript>
 
@@ -2880,8 +2086,6 @@
     </section>
 
   </main>
-
-  <!-- Rodapé -->
 
   <footer class="site-footer">
     <div class="container">
@@ -2902,7 +2106,6 @@
 
         <div class="footer-column">
           <h3>Explore</h3>
-
           <ul>
             <li><a href="#servicos">Nossos serviços</a></li>
             <li><a href="#como-funciona">Como funciona</a></li>
@@ -2921,9 +2124,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="icon" aria-hidden="true">
-                  <use href="#i-whatsapp"/>
-                </svg>
+                <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
                 (31) 98111-6900
               </a>
             </li>
@@ -2934,9 +2135,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="icon" aria-hidden="true">
-                  <use href="#i-instagram"/>
-                </svg>
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
                 @super_clean.oficial
               </a>
             </li>
@@ -2948,9 +2147,7 @@
                 rel="noopener noreferrer"
               >
                 Agendar online
-                <svg class="icon" aria-hidden="true">
-                  <use href="#i-arrow"/>
-                </svg>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
             </li>
           </ul>
@@ -2963,14 +2160,13 @@
           © <span id="current-year">2026</span> Super Clean.
           Todos os direitos reservados.
         </p>
-
         <p>Desenvolvido por Estúdio G.</p>
       </div>
 
     </div>
   </footer>
 
-  <!-- WhatsApp flutuante -->
+  <!-- WhatsApp do computador -->
 
   <a
     class="floating-contact"
@@ -2979,59 +2175,60 @@
     rel="noopener noreferrer"
     aria-label="Conversar com a Super Clean no WhatsApp"
   >
-    <svg class="icon" aria-hidden="true">
-      <use href="#i-whatsapp"/>
-    </svg>
-
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
     <span>Vamos conversar?</span>
   </a>
 
-  <!-- Navegação e formulário -->
+  <!-- Barra de orçamento do celular -->
+
+  <aside
+    class="mobile-contact"
+    id="mobile-contact"
+    aria-label="Orçamento rápido"
+    hidden
+  >
+    <a class="button button-primary" href="#orcamento">
+      <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+      Pedir meu orçamento
+    </a>
+  </aside>
 
   <script>
-    const mobileButton = document.getElementById("mobile-menu");
-    const navigation = document.getElementById("navigation");
+    // Menu acessível no celular.
+    // Sem JavaScript, a navegação continua visível.
 
-    document.documentElement.classList.add("menu-ready");
+    const mobileButton = document.getElementById('mobile-menu');
+    const navigation = document.getElementById('navigation');
+
+    document.documentElement.classList.add('menu-ready');
 
     function setMenu(open) {
-      navigation.classList.toggle("is-open", open);
+      navigation.classList.toggle('is-open', open);
+      mobileButton.setAttribute('aria-expanded', String(open));
+      mobileButton.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
 
-      mobileButton.setAttribute(
-        "aria-expanded",
-        String(open)
-      );
-
-      mobileButton.setAttribute(
-        "aria-label",
-        open ? "Fechar menu" : "Abrir menu"
-      );
+      scheduleMobileContact();
     }
 
-    mobileButton.addEventListener("click", () => {
-      const isOpen =
-        mobileButton.getAttribute("aria-expanded") === "true";
-
-      setMenu(!isOpen);
+    mobileButton.addEventListener('click', () => {
+      setMenu(mobileButton.getAttribute('aria-expanded') !== 'true');
     });
 
-    navigation.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        setMenu(false);
-      });
+    navigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenu(false));
     });
 
-    document.addEventListener("keydown", event => {
+    document.addEventListener('keydown', event => {
       if (
-        event.key === "Escape" &&
-        mobileButton.getAttribute("aria-expanded") === "true"
+        event.key === 'Escape' &&
+        mobileButton.getAttribute('aria-expanded') === 'true'
       ) {
         setMenu(false);
-        mobileButton.focus();
+        mobileButton.focus({ preventScroll: true });
       }
     });
 
-    document.addEventListener("click", event => {
+    document.addEventListener('click', event => {
       if (
         !navigation.contains(event.target) &&
         !mobileButton.contains(event.target)
@@ -3040,38 +2237,36 @@
       }
     });
 
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       if (window.innerWidth > 850) {
         setMenu(false);
       }
     });
 
-    // Seleciona o serviço ao clicar nos cartões.
+    // Os links dos serviços selecionam a opção no formulário.
 
-    const serviceSelect = document.getElementById("quote-service");
+    const serviceSelect = document.getElementById('quote-service');
 
-    document.querySelectorAll("[data-service]").forEach(link => {
-      link.addEventListener("click", () => {
+    document.querySelectorAll('[data-service]').forEach(link => {
+      link.addEventListener('click', () => {
         serviceSelect.value = link.dataset.service;
       });
     });
 
-    // Prepara a mensagem do orçamento para o WhatsApp.
+    // Monta a mensagem enviada ao WhatsApp.
 
-    const quoteForm = document.getElementById("quote-form");
+    const quoteForm = document.getElementById('quote-form');
 
-    quoteForm.addEventListener("submit", event => {
-      const clientName = document.getElementById("quote-name");
-      const locationInput = document.getElementById("quote-location");
+    quoteForm.addEventListener('submit', event => {
+      const clientName = document.getElementById('quote-name');
+      const locationInput = document.getElementById('quote-location');
 
       clientName.setCustomValidity(
-        clientName.value.trim() ? "" : "Informe seu nome."
+        clientName.value.trim() ? '' : 'Informe seu nome.'
       );
 
       locationInput.setCustomValidity(
-        locationInput.value.trim()
-          ? ""
-          : "Informe seu bairro e sua cidade."
+        locationInput.value.trim() ? '' : 'Informe seu bairro e sua cidade.'
       );
 
       if (!quoteForm.reportValidity()) {
@@ -3079,95 +2274,136 @@
         return;
       }
 
-      const details =
-        document.getElementById("quote-details").value.trim();
+      const details = document.getElementById('quote-details').value.trim();
 
       const lines = [
-        "Olá, Super Clean! Gostaria de um orçamento.",
-        "",
-        "Nome: " + clientName.value.trim(),
-        "Serviço: " + serviceSelect.value,
-        "Bairro e cidade: " + locationInput.value.trim()
+        'Olá, Super Clean! Gostaria de um orçamento.',
+        '',
+        'Nome: ' + clientName.value.trim(),
+        'Serviço: ' + serviceSelect.value,
+        'Bairro e cidade: ' + locationInput.value.trim()
       ];
 
       if (details) {
-        lines.push("Detalhes: " + details);
+        lines.push('Detalhes: ' + details);
       }
 
       lines.push(
-        "",
-        "Posso enviar fotos da peça para a avaliação."
+        '',
+        'Posso enviar fotos da peça para a avaliação.'
       );
 
-      const message = lines.join("\n");
+      const message = lines.join('\n');
 
-      document.getElementById("quote-message").value = message;
+      document.getElementById('quote-message').value = message;
 
-      document.getElementById("quote-fallback").href =
-        "https://wa.me/5531981116900?text=" +
-        encodeURIComponent(message);
+      document.getElementById('quote-fallback').href =
+        'https://wa.me/5531981116900?text=' + encodeURIComponent(message);
 
-      document.getElementById("quote-status").hidden = false;
+      document.getElementById('quote-status').hidden = false;
     });
 
-    ["quote-name", "quote-location"].forEach(id => {
-      document.getElementById(id).addEventListener("input", event => {
-        event.target.setCustomValidity("");
+    ['quote-name', 'quote-location'].forEach(id => {
+      document.getElementById(id).addEventListener('input', event => {
+        event.target.setCustomValidity('');
       });
     });
 
-    document.getElementById("current-year").textContent =
+    // Barra de orçamento exclusiva do celular.
+
+    const mobileContact = document.getElementById('mobile-contact');
+    const heroQuote = document.getElementById('hero-quote');
+    const smallScreen = window.matchMedia('(max-width: 850px)');
+
+    let mobileContactFrame = 0;
+
+    function updateMobileContact() {
+      mobileContactFrame = 0;
+
+      const headerBottom =
+        document.getElementById('header').getBoundingClientRect().bottom;
+
+      const formBounds = quoteForm.getBoundingClientRect();
+
+      const formVisible =
+        formBounds.top < window.innerHeight - 90 &&
+        formBounds.bottom > headerBottom;
+
+      const isEditing =
+        document.activeElement &&
+        document.activeElement.matches('input, select, textarea');
+
+      const primaryPassed =
+        heroQuote.getBoundingClientRect().bottom <= headerBottom;
+
+      const show =
+        smallScreen.matches &&
+        primaryPassed &&
+        !formVisible &&
+        !isEditing &&
+        mobileButton.getAttribute('aria-expanded') !== 'true';
+
+      mobileContact.hidden = !show;
+    }
+
+    function scheduleMobileContact() {
+      if (!mobileContactFrame) {
+        mobileContactFrame = requestAnimationFrame(updateMobileContact);
+      }
+    }
+
+    window.addEventListener('scroll', scheduleMobileContact, { passive: true });
+    window.addEventListener('resize', scheduleMobileContact);
+    window.addEventListener('pageshow', scheduleMobileContact);
+
+    document.addEventListener('focusin', scheduleMobileContact);
+    document.addEventListener('focusout', scheduleMobileContact);
+
+    scheduleMobileContact();
+
+    document.getElementById('current-year').textContent =
       new Date().getFullYear();
   </script>
 
-  <!-- Firebase: mantém o registro de acessos existente. -->
-
   <script type="module">
-    if (
-      !["localhost", "127.0.0.1", ""].includes(
-        window.location.hostname
-      )
-    ) {
+    // Mantém o registro de acessos existente.
+    // Falhas no Firebase não afetam o funcionamento da página.
+    // A prévia local não registra visitas.
+
+    if (!['localhost', '127.0.0.1', ''].includes(window.location.hostname)) {
       try {
         const [
           { initializeApp },
           { getDatabase, ref, push }
         ] = await Promise.all([
-          import(
-            "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js"
-          ),
-          import(
-            "https://www.gstatic.com/firebasejs/12.8.0/firebase-database.js"
-          )
+          import('https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js'),
+          import('https://www.gstatic.com/firebasejs/12.8.0/firebase-database.js')
         ]);
 
         const firebaseConfig = {
-          apiKey: "AIzaSyB4kaVYrfCYeu1LkZj3tgW3Rn1BND5hRWk",
-          authDomain: "superclean-426ab.firebaseapp.com",
-          databaseURL:
-            "https://superclean-426ab-default-rtdb.firebaseio.com",
-          projectId: "superclean-426ab",
-          storageBucket: "superclean-426ab.firebasestorage.app",
-          messagingSenderId: "710947410931",
-          appId: "1:710947410931:web:ea7bc519874cc875b67886",
-          measurementId: "G-MLVEMYP5L6"
+          apiKey: 'AIzaSyB4kaVYrfCYeu1LkZj3tgW3Rn1BND5hRWk',
+          authDomain: 'superclean-426ab.firebaseapp.com',
+          databaseURL: 'https://superclean-426ab-default-rtdb.firebaseio.com',
+          projectId: 'superclean-426ab',
+          storageBucket: 'superclean-426ab.firebasestorage.app',
+          messagingSenderId: '710947410931',
+          appId: '1:710947410931:web:ea7bc519874cc875b67886',
+          measurementId: 'G-MLVEMYP5L6'
         };
 
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
-        await push(ref(db, "acessos"), {
-          horario: new Date().toLocaleString("pt-BR", {
-            timeZone: "America/Sao_Paulo"
+        await push(ref(db, 'acessos'), {
+          horario: new Date().toLocaleString('pt-BR', {
+            timeZone: 'America/Sao_Paulo'
           }),
-          info: "Acesso ao Site Premium",
+          info: 'Acesso ao Site Premium',
           device: navigator.userAgent
         });
 
       } catch (error) {
-        console.warn(
-          "Registro de acesso indisponível no momento."
-        );
+        console.warn('Registro de acesso indisponível no momento.');
       }
     }
   </script>
